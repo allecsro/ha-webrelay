@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the WebRelay service
+# ==============================================================================
+
+# Add your code here
+
+declare port
+
+port=$(bashio::config 'port')
+
+bashio::log.info "Starting WebRelay on port ${port}"
+
+## Run your program
+exec /usr/bin/webrelay_start
