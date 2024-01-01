@@ -1,6 +1,6 @@
 name: "WebRelay"
-description: "A Home Assistant addon which emultates the HTTP API of Control by Web Webrelay."
-version: "1.0.1"
+description: "A Home Assistant addon which emultates the HTTP API of Control by Web Webrelay"
+version: "1.1.2"
 slug: "webrelay"
 init: false
 arch:
@@ -12,3 +12,12 @@ arch:
 startup: services
 ports:
   8000/tcp: 8000
+options:
+  port: 8000
+  whitelist:
+    - 192.168.1.111
+    - 192.168.1.112
+    - 192.168.1.114
+schema:
+  port: int
+  whitelist: str
