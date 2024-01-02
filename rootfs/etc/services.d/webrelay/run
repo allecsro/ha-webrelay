@@ -12,4 +12,4 @@ port=$(bashio::config 'port')
 bashio::log.info "Starting WebRelay on port ${port}"
 
 ## Run your program
-exec /usr/bin/webrelay_start
+exec /usr/bin/webrelay_start.sh
